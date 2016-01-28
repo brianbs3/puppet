@@ -1,0 +1,12 @@
+#!/bin/bash
+git fetch  > /dev/null 2>&1
+local=$(git rev-parse HEAD);
+remote=$(git rev-parse --remotes);
+if [[ "$remote" == *"$local"* ]]; 
+then
+# Exit with 0 if there is no changes so we can use an unless in puppet                                                                                                             
+exit 0
+else
+# Exit with 1 if there is changes so we can use an unless in puppet                                                                                                                
+exit 1
+fi

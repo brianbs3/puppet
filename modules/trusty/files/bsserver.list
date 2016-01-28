@@ -1,0 +1,3 @@
+deb http://bs.bs/trusty trusty main
+deb http://bs.bs/trusty trusty-updates main
+deb http://bs.bs/trusty trusty universe
